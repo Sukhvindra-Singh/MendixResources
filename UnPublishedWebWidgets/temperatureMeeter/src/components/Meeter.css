@@ -1,0 +1,78 @@
+.TemperatureMeeter{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+    width: fit-content;
+}
+.MeeterDoughnut {
+    /* border: 1px solid red; */
+    position: relative;
+    width: fit-content;
+}
+
+.needle {
+    position: absolute;
+    bottom: 0px;
+    left: 45%;
+    height: 110px;
+    width: 25px;
+    background: transparent linear-gradient(212deg, #2DAD9E 0%, #095988 100%) 0% 0% no-repeat padding-box;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    transform-origin: 50% 90%;
+    transform: rotate(10deg);
+}
+
+.triable-left {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    clip-path: polygon(0% 0%, 100% 0%, 0% 98%);
+    background-color: #ffffff;
+    height: 110px;
+    width: 14px;
+}
+
+.triable-right {
+    position: absolute;
+    right: -1px;
+    top:  -1px;
+    clip-path: polygon(100% 0%, 100% 94%, 0% 0%);
+    background-color: #ffff;
+    height: 110px;
+    width: 14px;
+}
+
+.circle {
+    z-index: 10;
+    bottom: 5px;
+    left: 7px;
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+
+.ValueContainer{
+    /* border: 1px solid green; */
+    width: calc(100% - 1rem);
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.Bound{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #095988;
+}
+.Percentage {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #095988;
+}

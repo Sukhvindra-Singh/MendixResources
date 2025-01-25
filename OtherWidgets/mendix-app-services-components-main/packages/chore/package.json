@@ -1,0 +1,28 @@
+{
+  "name": "@appservicescomponents/chore",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --format esm,cjs --watch --dts",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.14",
+    "tsconfig": "*",
+    "tsup": "^6.0.1",
+    "typescript": "^4.7.4"
+  },
+  "description": "This is only published to prevent duplicate or malicious  code ",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mendixlabs/app-services-components.git"
+  },
+  "author": "ahwelgemoed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mendixlabs/app-services-components/issues"
+  },
+  "homepage": "https://github.com/mendixlabs/app-services-components#readme"
+}

@@ -1,0 +1,17 @@
+/*
+Place your custom CSS here
+*/
+.simple-input-box-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    input{
+        width: 100%;
+    }
+
+}
+.simple-input-box-container input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="resilientitservices.custombutton.CustomButton" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Custom Button</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup  caption="General">
+            <propertyGroup caption="General">
+                <property key="caption" type="textTemplate">
+	                <caption>Caption</caption>
+	                <description/>
+                    <translations>
+		                <translation lang="en_US">Button</translation>
+	                </translations>
+                </property>
+                <property key="tooltip" type="string" required="false">
+                    <caption>Tooltip</caption>
+                    <description/>
+                </property>
+                <property key="cardIcon" type="icon" required="false">
+	                <caption>Icon</caption>
+	                <description/>
+                </property>
+                <property key="rendermode" type="enumeration" defaultValue="button">
+		            <caption>Render mode</caption>
+		            <description/>
+		            <enumerationValues>
+		    	        <enumerationValue key="button">Button</enumerationValue>
+		    	        <enumerationValue key="link">Link</enumerationValue>
+		            </enumerationValues>
+	            </property>
+                <property key="buttonstyle" type="enumeration" defaultValue="default" required="true">
+                    <caption>Button style</caption>
+                    <description/>
+                    <enumerationValues>
+                        <enumerationValue key="default">Default</enumerationValue>
+                        <enumerationValue key="primary">Primary</enumerationValue>
+                        <enumerationValue key="success">Success</enumerationValue>
+                        <enumerationValue key="info">Info</enumerationValue>
+                        <enumerationValue key="warning">Warning</enumerationValue>
+                        <enumerationValue key="danger">Danger</enumerationValue>
+                    </enumerationValues>
+                </property>
+                <!-- <property key="buildInIcon" type="enumeration" defaultValue="apartment" required="true">
+                    <caption>Select icon</caption>
+                    <description>choose build-in icon with list</description>
+                    <enumerationValues>
+                        <enumerationValue key="apartment">apartment</enumerationValue>
+                        <enumerationValue key="robot">robot</enumerationValue>
+                        <enumerationValue key="bug">bug</enumerationValue>
+                        <enumerationValue key="comment">comment</enumerationValue>
+                        <enumerationValue key="verified">verified</enumerationValue>
+                        <enumerationValue key="whatsapp">whatsapp</enumerationValue>
+                        <enumerationValue key="search">search</enumerationValue>
+                        <enumerationValue key="retweet">retweet</enumerationValue>
+                    </enumerationValues>
+                </property> -->
+            </propertyGroup>
+            <propertyGroup caption="Visibility">
+                <systemProperty key="Visibility"/>
+            </propertyGroup>
+            <propertyGroup caption="Events">
+                <property key="buttonAction" type="action">
+	                <caption>On click</caption>
+	                <description/>
+                </property>
+            </propertyGroup>
+        </propertyGroup>
+    </properties>
+</widget>

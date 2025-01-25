@@ -1,0 +1,45 @@
+{
+  "name": "app-services-components",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/**/*",
+      "packages/**/*"
+    ],
+    "nohoist": [
+      "*/@mendix",
+      "*/react",
+      "**/react/**",
+      "*/react-native",
+      "**/react-native/**",
+      "*/enzyme",
+      "**/enzyme/**",
+      "**/@mendix/**",
+      "*/jspdf",
+      "**/jspdf/**",
+      "**/html-to-image/**",
+      "*/html-to-image"
+    ]
+  },
+  "scripts": {
+    "docs:dev": "npx docsify serve docs",
+    "build": "turbo run build --force",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "prettier": "latest",
+    "turbo": "latest",
+    "rollup-plugin-typescript2": "^0.31.2"
+  },
+  "resolutions": {
+    "mendix": "^9.12.50423"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": "14"
+  },
+  "packageManager": "yarn@1.22.5"
+}

@@ -1,0 +1,27 @@
+/*
+Place your custom CSS here
+*/
+#skip_link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    background-color: white;
+}
+
+#skip_link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+a:focus,
+div:focus,
+h2:focus,
+button:focus {
+    outline-color: darkblue;
+    outline: 2px solid darkblue !important;
+    /* background-color: rgb(163, 42, 165)  */
+}

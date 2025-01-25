@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="resilientitservices.adaptivedropdown.AdaptiveDropdown" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Adaptive Dropdown</name>
+    <description>This Dropdown easily customizable </description>
+    <icon/>
+    <properties>
+		<propertyGroup caption="General">
+			<propertyGroup caption="General">
+				<property key="emptyOption" type="string" required="false" defaultValue="Select">
+					<caption>Empty option caption</caption>
+					<description />
+				</property>
+			</propertyGroup>
+			<propertyGroup caption="Data Source">
+				<property key="selectableValues" type="attribute" required="false">
+					<caption>Selectable value</caption>
+					<description />
+					<attributeTypes>
+						<attributeType name="String" />
+					</attributeTypes>
+				</property>
+				<!-- <property key="MyEnum" type="attribute" required="false">
+					<caption>Attribute</caption>
+					<description />
+					<attributeTypes>
+						<attributeType name="Enum" />
+					</attributeTypes>
+				</property> -->
+				
+				<property key="objectsDatasource" type="datasource" isList="true">
+					<caption>Selectable objects</caption>
+					<description />
+				</property>
+			</propertyGroup>
+			<propertyGroup caption="Label">
+				<systemProperty key="Label" />
+			</propertyGroup>
+			<propertyGroup caption="Visibility">
+				<systemProperty key="Visibility" />
+			</propertyGroup>
+			<propertyGroup caption="Validation">
+				<property key="requiredMessage" type="textTemplate" required="false">
+					<caption>Required message</caption>
+					<description />
+					<translations>
+						<translation lang="en_US">An input text is required</translation>
+					</translations>
+				</property>
+			</propertyGroup>
+		</propertyGroup>
+		<propertyGroup caption="Events">
+			<propertyGroup caption="Events">
+				<property key="onChange" type="action">
+					<caption>On Change</caption>
+					<description/>
+				</property>
+			</propertyGroup>
+		</propertyGroup>
+	</properties>
+</widget>

@@ -1,0 +1,34 @@
+/*
+Place your custom CSS here
+*/
+.custom-button{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 0.6em 1em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #264ae5;
+    border: 1px solid #e7e7e9;
+    border-radius: 4px;
+    background-color: #fff;
+    background-image: none;
+    box-shadow: none;
+    text-shadow: none;
+    font-size: 14px;
+    line-height: 1.428571429;
+}
+
+.button-img{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+

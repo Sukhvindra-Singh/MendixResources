@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<package xmlns="http://www.mendix.com/package/1.0/">
+    <clientModule name="TemperatureMeeter" version="1.0.0" xmlns="http://www.mendix.com/clientModule/1.0/">
+        <widgetFiles>
+            <widgetFile path="TemperatureMeeter.xml"/>
+        </widgetFiles>
+        <files>
+            <file path="mendix/temperaturemeeter"/>
+        </files>
+    </clientModule>
+</package>

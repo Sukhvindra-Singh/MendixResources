@@ -1,0 +1,122 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable array-callback-return */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
+/* eslint-disable linebreak-style */
+import React, { createElement } from "react";
+import { Marker } from "@react-google-maps/api";
+import { DynamicValue, WebImage, ObjectItem, EditableValue } from "mendix";
+import { addMarkerDragEvent, createSymbol } from "./MarkerUtils";
+
+
+export interface Location {
+    formattedAddress?: string;
+    position: {
+        lat: number;
+        lng: number;
+    };
+    name: string;
+}
+
+export interface MarkerProps extends Location {
+    guid: string;
+    isNew: boolean;
+    mxObject: ObjectItem;
+    draggable: boolean;
+    editable?: boolean;
+    clusterer?: any;
+    visible: boolean;
+    color: string;
+    opacity: number;
+    iconImage: DynamicValue<WebImage>;
+    symbol: string;
+    size: string;
+    onClick?: any;
+    latAttrUpdate?: EditableValue<Big | string>;
+    lngAttrUpdate?: EditableValue<Big | string>;
+    formattedAddressAttr?: EditableValue<string>;
+    url?: string;
+    markerBadge?: string;
+}
+
+export interface MarkerState {
+    marker: google.maps.Marker;
+}
+
+export default class MarkerComponent extends React.Component<MarkerProps, MarkerState> {
+    constructor(props: MarkerProps) {
+        super(props);
+        this.state = {
+            marker: {} as google.maps.Marker,
+        };
+        this.onLoad = this.onLoad.bind(this);
+    }
+    onLoad = (marker: google.maps.Marker) => {
+        this.setState({
+            marker
+        });
+        addMarkerDragEvent(marker, this.props.latAttrUpdate, this.props.lngAttrUpdate, this.props.formattedAddressAttr);
+    };
+    /* onClick = (e:any) => {
+        if (e){
+            console.dir(this.props);
+
+        }
+    };
+    onInfoWindowLoad = () => {
+        console.log('infoWindow: ');
+    }
+    onInfoWindowClose = () => {
+
+    };
+    shouldComponentUpdate(prevProps:any) {
+        if (prevProps.name == this.props.name && prevProps.position == this.props.position){
+            console.error('marker ' +  this.props.name + ' NOT updated!');
+            return false;
+        } else {
+            console.error('marker ' +  this.props.name + ' updated!');
+            return true;
+        }
+    }*/
+    render() {
+        if (this.props.url) {
+            const style = { backgroundImage: `url(${this.props.url})` };
+
+            return <div className="widget-google-maps-marker-url" style={style}></div>;
+        }
+        const symbol = createSymbol(this.props);
+
+        const item = this.props.mxObject as any;
+        const symbolProp = Object.getOwnPropertySymbols(item)[0];
+        const data = item[symbolProp as unknown as "id"];
+        const attributes = data._mxObject.jsonData.attributes;
+
+
+
+        if (attributes?.PressureReading?.value === undefined || attributes?.PressureReading?.value === '0' || attributes?.PressureReading?.value === null|| attributes?.PressureReading?.value === '') {
+            return (
+                <Marker
+                    onLoad={this.onLoad}
+                    key={this.props.guid}
+                    clusterer={this.props.clusterer}
+                    position={this.props.position}
+                    onClick={this.props.onClick}
+                    draggable={this.props.draggable}
+                    icon={symbol}
+                ></Marker>
+            );
+        } else {
+            return (
+                <Marker
+                    onLoad={this.onLoad}
+                    key={this.props.guid}
+                    clusterer={this.props.clusterer}
+                    position={this.props.position}
+                    onClick={this.props.onClick}
+                    draggable={this.props.draggable}
+                    icon={symbol}
+                    label={{ text: `${attributes?.PressureReading?.value}`, className: 'marker-badge-title' }}
+                ></Marker>)
+        }
+    }
+}

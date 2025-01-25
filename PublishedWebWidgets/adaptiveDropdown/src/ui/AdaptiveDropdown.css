@@ -1,0 +1,5 @@
+sudo service postgresql start --force
+sudo service postgresql stop --force
+pg_isready
+systemctl is-active postgresql
+systemctl is-enabled postgresql

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="resilientitservices.keyboardavoidview.KeyboardAvoidView" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Native"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Keyboard Avoid View</name>
+    <description>My widget description</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="paddingAndroid" type="integer" required="true" defaultValue="0">
+                <caption>Vertical Offset Android</caption>
+                <description>Increase the vertical offset of the view further when the keyboard is displayed, ensuring the content moves lower towards the bottom.</description>
+            </property>
+              <property key="paddingIOS" type="integer" required="true" defaultValue="0">
+                <caption>Vertical Offset IOS</caption>
+                <description>Increase the vertical offset of the view further when the keyboard is displayed, ensuring the content moves lower towards the bottom.</description>
+            </property>
+            <property key="Content" type="widgets" required="true">
+                <caption>Content</caption>
+                <description></description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

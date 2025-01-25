@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="resilientitservices.screenshottopdftomail.ScreenshotToPdfToMail" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Screenshot To Pdf To Mail</name>
+    <description>Take screebshot of current page and create the pdf of screenshot and send to mail</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="isDownload" type="boolean" defaultValue="true">
+                <caption>Download Pdf</caption>
+                <description></description>
+            </property>
+            <property key="base64Image" type="attribute" required="false">
+                <caption>Base64 Image Attribute</caption>
+                <description>You can access base64Image data from this attribute</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="pageSize" type="enumeration" defaultValue="a4">
+                <caption>Page Size</caption>
+                <description>Standard Page Sizes</description>
+                <enumerationValues>
+                    <enumerationValue key="letter">Letter</enumerationValue>
+                    <enumerationValue key="a4">A4</enumerationValue>
+                    <enumerationValue key="a5">A5</enumerationValue>
+                    <enumerationValue key="a6">A6</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="pageOrientation" type="enumeration" defaultValue="l">
+                <caption>Page Orientation</caption>
+                <description />
+                <enumerationValues>
+                    <enumerationValue key="p">Portrait</enumerationValue>
+                    <enumerationValue key="l">Landscape</enumerationValue>
+                </enumerationValues>
+            </property>
+            <property key="classNameToFound" type="string" required="false">
+                <caption>Class Name to Print</caption>
+                <description />
+            </property>
+            <property key="prefixPageName" type="string" required="false">
+                <caption>Prefix for Page Name</caption>
+                <description />
+            </property>
+            <property key="printButton" type="widgets" required="true">
+                <caption>Print Button</caption>
+                <description>Button that does nothing</description>
+            </property>
+            <property key="onSuccess" type="action">
+                <caption>Action</caption>
+                <description></description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

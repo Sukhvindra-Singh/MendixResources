@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget
+    id="resilientitservices.customimageviewer.CustomImageViewer"
+    pluginWidget="true"
+    needsEntityContext="true"
+    offlineCapable="true"
+    supportedPlatform="Native"
+    xmlns="http://www.mendix.com/widget/1.0/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd"
+>
+    <name>Custom Image Viewer</name>
+    <description>My widget description</description>
+    <icon />
+    <properties>
+        <propertyGroup caption="General">
+            <property key="imageType" type="enumeration" defaultValue="url">
+                <caption>Image Type</caption>
+                <description />
+                <enumerationValues>
+                    <enumerationValue key="url">URL</enumerationValue>
+                    <enumerationValue key="base64">Base64</enumerationValue>
+                    <enumerationValue key="image">Image</enumerationValue>
+                </enumerationValues>
+            </property>
+
+            <property key="imageUrl" type="textTemplate" required="true">
+                <caption>Image URL</caption>
+                <description>The link of the external image.</description>
+            </property>
+            <property key="Base64Content" type="textTemplate" required="true">
+                <caption>Image URL</caption>
+                <description>The link of the external image.</description>
+            </property>
+            <property key="extention" type="textTemplate" required="true">
+                <caption>Image Extention</caption>
+                <description>Image extention (eg.png,jpg).</description>
+            </property>
+            <property key="bgImage" type="image" required="false">
+	            <caption>Background Image</caption>
+	            <description>Image shown blurred in a background</description>
+            </property>
+
+            <property key="defaultURL" type="textTemplate" required="false">
+                <caption>Default Image URL</caption>
+                <description>The link of the external image.</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>

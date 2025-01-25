@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="resilientitservices.reacticons.ReactIcons" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>React Icons</name>
+    <description>With the help of this widget we can use any icon.</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="iconname" type="string" required="true">
+                <caption>Icon name</caption>
+                <description>You can find all icon name here https://mendix-icons-directory.vercel.app/</description>
+            </property>
+            <property key="color" type="string" required="false">
+                <caption>Icon Color</caption>
+                <description/>
+            </property>
+            <property key="size" type="string" required="false">
+                <caption>Icon Size</caption>
+                <description/>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
